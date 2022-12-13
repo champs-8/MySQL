@@ -1,0 +1,119 @@
+        COMANDOS
+=========================
+
+default serve para deixar algo padrão nos comandos
+
+
+use database                    -> usa o banco de dados
+create database                 -> cria
+drop database                   -> apaga
+default character set utf8      -> lingua latina, pode colocar no final dos comandos
+default collate utf8_general_ci -> acentuação
+not null                        -> obriga preencher todos os campos
+create table 
+describe table                  - mostra a composição da tabela
+status                          -> status
+auto_increment                  -> auto incrementa o valor +1
+foreign key                     -> chave estrangeira
+primary key                     -> escolha da chave primaria
+unique                          -> elemento unico na tabela
+insert into                     -> inserir os dados
+alter table                     -> altera estrutura/dados da tabela
+add column                      -> adiciona coluna
+modify column                   -> modifica coluna
+uptade (atualize)               -> comando para manipular a coluna
+set(configure)                  -> selecionar a celula que vai ser alterada
+where(onde)                     -> indica a celula
+limit                           -> coloca uma segurança na linha de dados.
+delete from ---                 -> apagar o linha completa da tabela
+truncate table                  -> apaga os registros da tabela toda
+Dump                            -> termo que refere a backup do BD
+show tables                     -> mostra as tabelas dentro do database
+select *from ----               -> mostra os registros da tabela
+rename to                       -> renomea a tabela toda
+references                      -> faz relação da chave primaria com a estrangeira.
+
+=========================
+banco de dados é composto por quatro partes
+
+base de dados
+sistema gerenciador 
+linguagem de exploração 
+programas adicionais
+
+
+Instruções
+DDL -> Definição
+DML -> Manipula
+DQL -> Solicitações (query)
+DCL -> controle
+DTL -> Transações (Durabilidade, Isolsamento, Consistencia, Atomicidade)
+
+banco de dados tem 4 tipos primitivos
+
+NUMERICOS-> 
+inteiros (tinyInt, smallInt, Int, mediumInt, bigInt), 
+reias (decimal, float, double e real) e 
+logicos(bit e boolean)
+
+LITERAIS -> 
+caracteres(char e varChar),
+textos(tinyText, text, mediumText, longText), 
+binários(tinyBlob, blob, mediumBlob, longBlob) e 
+coleção(enum e set)
+
+DATA/TEMPO -> date, dateTime, timeStamp, Time, Year
+
+ESPACIAL -> geometry, point, polygon, multiPolygon
+
+
+
+
+
+
+Uma linha de comando nao manipula a tabela toda, mas manipula varios dados de uma linha de informação
+
+
+
+
+
+
+MODELO RELACIONAL
+
+conceitos vistos : entidades, atributos, cardinalidades, relacionamentos, n vezes, chave estrangeira (uma chave primaria que veio de outro registro)
+relação entre tabelas é praticamente troca de chaves cuidando das regras.
+
+
+primary key é importante para que nao tenham tuplas iguais e para poder se relacionar.
+
+
+
+REGRAS DO RELACIONAMENTO 
+
+(atributos em camelCase)
+
+1 VS 1
+caso manter separados, pegue a chave do entidade recessiva e passe para a dominante.
+
+1 VS MUITOS
+pega a primary key do lado 1 e joga para o lado N como key estrangeira.
+
+MUITOS VS MUITOS
+o relacionamento se transformará em um entidade com uma primary key tambem.
+cardinalidade da nova entidade com os antigas será 1vsMuitos.
+
+
+InnoDB é um mecanismo(engine) que permite criação de tabelas que suportam chaves estrangeiras.
+ACID -> Atomicidade = nao pode ser dividida em subtarefas, ou tudo é feito ou nada.
+Consistencia =  o que estava consistente antes, tem que permanecer consistente depois da Transação
+Isolamento = coisas paralelas acontecendo, tem que ser separados
+Durabilidade = dados tem que ser durável.
+
+
+quando se usa JOIN so é mostrado as tuplas que tem relações.
+(por padrão é utilizado Inner JOIN)
+
+OUTER JOIN vai fazer a junção das tabelas mesmo com as tuplas que nao tenham dados,
+dando preferencia para a entidade da direita ou da esquerda.
+
+
